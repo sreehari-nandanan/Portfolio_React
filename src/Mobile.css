@@ -67,8 +67,8 @@
     gap: 1.5rem;
     display: flex;
     justify-content: center;
-    top: -25px; /* Adjust: move socials up (negative) or down (positive) */
-    left: -220px; /* Adjust: move socials left (negative) or right (positive) */
+    top: -0px; /* Adjust: move socials up (negative) or down (positive) */
+    left: -200px; /* Adjust: move socials left (negative) or right (positive) */
   }
 
   .hero-social-link {
@@ -266,12 +266,12 @@
   .achievements-heading {
     position: relative;
     font-size: 3.5rem;
-    writing-mode: horizontal-tb;
-    margin-left: 15px;
+    writing-mode: horizontal-tb !important;
+    margin-left: 0 !important;
     text-align: center;
     font-weight: 800;
-    top: 0px; /* Adjust: move achievements heading up/down */
-    left: 0px; /* Adjust: move achievements heading left/right */
+    top: 35px; /* Adjust: move achievements heading up/down */
+    left: 15px; /* Adjust: move achievements heading left/right */
   }
 
   .achievements-right {
