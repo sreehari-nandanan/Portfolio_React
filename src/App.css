@@ -710,6 +710,7 @@ html {
   line-height: 0.9;
   margin: 0;
   margin-left: -100px;
+  margin-top: -40px;
   letter-spacing: -0.02em;
   writing-mode: vertical-rl;
   text-orientation: mixed;

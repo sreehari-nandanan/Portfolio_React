@@ -1,0 +1,493 @@
+/* Mobile Responsive Styles */
+
+@media (max-width: 768px) {
+  /* Hero Section - Portrait Mode */
+  .hero {
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .hero-text {
+    position: relative;
+    margin-bottom: 0;
+    text-align: left;
+    width: 100%;
+    top: 130px; /* Adjust: move title up (negative) or down (positive) */
+    left: 110px; /* Adjust: move title left (negative) or right (positive) */
+  }
+
+  .hero-title {
+    font-size: 2.2rem !important;
+    text-align: center !important;
+    line-height: 1.2;
+    width: 100%;
+  }
+
+  .hero-image {
+    position: relative;
+    align-self: center;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 190px; /* Adjust: move image up (negative) or down (positive) */
+    left: 130px; /* Adjust: move image left (negative) or right (positive) */
+  }
+
+  .hero-image img {
+    width: 450px !important; /* 300px * 1.5 = 450px */
+    max-width: 90vw !important;
+    height: auto;
+    margin: 0 !important;
+  }
+
+  .scroll-velocity {
+    display: none !important;
+  }
+
+  .hero-socials {
+    position: relative !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    padding: 0.8rem 1.5rem;
+    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    top: -25px; /* Adjust: move socials up (negative) or down (positive) */
+    left: -220px; /* Adjust: move socials left (negative) or right (positive) */
+  }
+
+  .hero-social-link {
+    font-size: 1.2rem;
+  }
+
+  /* Aurora height adjustment for mobile */
+  .hero .aurora-container {
+    height: calc(100% - 100px) !important;
+  }
+
+  .hero .aurora-container canvas {
+    height: calc(100% - 100px) !important;
+  }
+
+  /* About Section */
+  .about {
+    min-height: 100vh;
+    padding: 5rem 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    min-height: 80vh;
+  }
+
+  .about-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    top: 50px; /* Adjust: move left section up/down */
+    left: 0px; /* Adjust: move left section left/right */
+  }
+
+  .about-heading {
+    position: relative;
+    font-size: 10rem !important;
+    text-align: center;
+    margin-top: 0 !important;
+    font-weight: 800 !important;
+    top: 0px; /* Adjust: move heading up/down */
+    left: 0px; /* Adjust: move heading left/right */
+  }
+
+  .about-right {
+    position: relative;
+    gap: 2rem;
+    top: 0px; /* Adjust: move right section up/down */
+    left: 0px; /* Adjust: move right section left/right */
+  }
+
+  .about-text {
+    position: relative;
+    font-size: 1.6rem !important;
+    text-align: center;
+    line-height: 1.8;
+    font-weight: 600 !important;
+    top: 0px; /* Adjust: move text up/down */
+    left: 0px; /* Adjust: move text left/right */
+  }
+
+  .image-hover-container {
+    position: relative;
+    margin: 0 auto !important;
+    width: 140px !important;
+    top: 0px; /* Adjust: move logo up/down */
+    left: 0px; /* Adjust: move logo left/right */
+  }
+
+  .image-hover-container img {
+    width: 100% !important;
+  }
+
+  /* Projects Section */
+  .projects {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .projects-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .projects-left {
+    position: relative;
+    margin-left: 0;
+    text-align: center;
+    top: 0px; /* Adjust: move projects left section up/down */
+    left: 0px; /* Adjust: move projects left section left/right */
+  }
+
+  .projects-heading {
+    position: relative;
+    font-size: 3rem;
+    top: 0px; /* Adjust: move projects heading up/down */
+    left: 0px; /* Adjust: move projects heading left/right */
+  }
+
+  .projects-count {
+    position: relative !important;
+    font-size: 4rem !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-top: 1rem !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
+    color: #40ffaa !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 800 !important;
+    background: linear-gradient(135deg, #40ffaa, #4079ff) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    top: 0px; /* Adjust: move projects count up/down */
+    left: 0px; /* Adjust: move projects count left/right */
+  }
+
+  /* Hide CircularText on mobile */
+  .projects-left > div > div[style*="absolute"] {
+    display: none !important;
+  }
+
+  .circular-text-large,
+  [class*="circular-text"],
+  [class*="CircularText"] {
+    display: none !important;
+  }
+
+  /* Force show count */
+  .projects-left .projects-count {
+    display: block !important;
+  }
+
+  .projects-right {
+    position: relative;
+    flex-direction: column;
+    margin-left: 0;
+    gap: 1.5rem;
+    top: 0px; /* Adjust: move projects list up/down */
+    left: 0px; /* Adjust: move projects list left/right */
+  }
+
+  .project-item {
+    min-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+
+  .project-item-title {
+    font-size: 1.5rem;
+  }
+
+  .project-status {
+    margin-right: 0;
+  }
+
+  .project-item-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .project-item-description {
+    font-size: 0.95rem;
+  }
+
+  /* Achievements Section */
+  .achievements {
+    padding: 4rem 0;
+    min-height: auto;
+  }
+
+  .achievements-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .achievements-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0px; /* Adjust: move achievements left section up/down */
+    left: 0px; /* Adjust: move achievements left section left/right */
+  }
+
+  .achievements-heading {
+    position: relative;
+    font-size: 3.5rem;
+    writing-mode: horizontal-tb;
+    margin-left: 15px;
+    text-align: center;
+    font-weight: 800;
+    top: 0px; /* Adjust: move achievements heading up/down */
+    left: 0px; /* Adjust: move achievements heading left/right */
+  }
+
+  .achievements-right {
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 0;
+    top: 0px; /* Adjust: move achievements list up/down */
+    left: 0px; /* Adjust: move achievements list left/right */
+  }
+
+  .achievement-item {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 15px;
+  }
+
+  .achievement-item-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .achievement-item-description {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+
+
+  /* Skills Section */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skill-item {
+    padding: 1.5rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2rem 1rem !important;
+  }
+
+  .footer-social-link {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* General */
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  /* Hide decorative elements */
+  .bounce-star,
+  .hero img[src="/arr.png"],
+  .hero img[src="/tp.png"],
+  .about img[src="/tp.png"] {
+    display: none !important;
+  }
+
+  /* Show and position arr.png in about section - top right */
+  .about img[src="/arr.png"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    max-width: 60px !important;
+    transform: rotate(-90deg) !important;
+    z-index: 999 !important;
+  }
+
+  /* Show and position arr.png in projects section - top left */
+  .projects img[src="/arr.png"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
+    max-width: 60px !important;
+    transform: rotate(180deg) !important;
+    z-index: 999 !important;
+  }
+
+  /* Show and position tp.png in projects section - top left */
+  .projects img[src="/tp.png"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
+    max-width: 40px !important;
+    z-index: 999 !important;
+  }
+
+  /* Show and position tp.png in achievements section - top left */
+  .achievements img[src="/tp.png"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    top: 35px !important;
+    left: 30px !important;
+    max-width: 45px !important;
+    z-index: 999 !important;
+  }
+
+  /* Hide curved loop only in achievements on mobile */
+  .achievements .curved-loop,
+  .achievements-left > div:last-child {
+    display: none !important;
+  }
+
+  /* Disable hover effects */
+  .skill-item:hover,
+  .project-item:hover,
+  .achievement-item:hover {
+    transform: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem !important;
+    text-align: center !important;
+  }
+
+  .hero-image img {
+    width: 390px !important; /* 260px * 1.5 = 390px */
+    max-width: 90vw !important;
+  }
+
+  .hero-socials {
+    gap: 1.2rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .about-heading,
+  .projects-heading,
+  .achievements-heading {
+    font-size: 2.8rem !important;
+  }
+
+  .about-text {
+    font-size: 1.3rem !important;
+    line-height: 1.7;
+    font-weight: 600 !important;
+  }
+
+  .about-grid {
+    padding: 2rem 1.5rem;
+    gap: 2.5rem;
+    min-height: 70vh;
+  }
+
+  .image-hover-container {
+    width: 120px !important;
+  }
+
+  .project-item {
+    padding: 1.2rem;
+  }
+
+  .footer-social-link {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content {
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-image img {
+    width: 400px !important;
+    margin-left: 0 !important;
+  }
+
+  .hero-socials {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .projects-right {
+    margin-left: 0;
+  }
+
+  .project-item {
+    min-width: 70%;
+    width: 70%;
+  }
+
+  .achievements-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

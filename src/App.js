@@ -1,4 +1,5 @@
 import "./App.css";
+import "./Mobile.css";
 import Aurora from './Aurora';
 import GradientText from './GradientText';
 import ScrollVelocity from './ScrollVelocity';
@@ -16,6 +17,7 @@ import { useEffect, useRef, useCallback, useState } from 'react';
 import CountUp from './components/CountUp';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useMobileDetect } from './useMobileDetect';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -219,6 +221,7 @@ const AchievementCard = ({ achievement }) => {
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const { isMobile, isTablet } = useMobileDetect();
   const arrowRef = useRef(null);
   const projectsRef = useRef(null);
   const projectsArrowRef = useRef(null);
@@ -237,7 +240,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (loading) return;
+    if (loading || isMobile) return;
 
     if (arrowRef.current) {
       const aboutSection = document.getElementById('about');
@@ -314,7 +317,7 @@ export default function App() {
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, [loading]);
+  }, [loading, isMobile]);
   const projects = [
     {
       title: "SECTOR",
