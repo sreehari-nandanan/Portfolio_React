@@ -67,7 +67,7 @@
     gap: 1.5rem;
     display: flex;
     justify-content: center;
-    top: -25px; /* Adjust: move socials up (negative) or down (positive) */
+    top: -20px; /* Adjust: move socials up (negative) or down (positive) */
     left: -220px; /* Adjust: move socials left (negative) or right (positive) */
   }
 
