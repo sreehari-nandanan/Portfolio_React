@@ -1,0 +1,44 @@
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--gradient-colors)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-animation var(--animation-speed) ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-colors)
+  );
+  background-size: 300% 100%;
+  border-radius: inherit;
+  padding: 2px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: gradient-animation var(--animation-speed) ease-in-out infinite;
+  display: var(--border-display);
+}

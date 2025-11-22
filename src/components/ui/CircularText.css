@@ -1,0 +1,33 @@
+.circular-text {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-text span {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform-origin: 0 75px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Inter', sans-serif;
+}
+
+.circular-text-large {
+  width: 350px;
+  height: 350px;
+}
+
+.circular-text-large span {
+  transform-origin: 0 175px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgba(64, 121, 255, 0.8);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.05em;
+}
